@@ -1,0 +1,36 @@
+﻿@model ProductCatalougeDataContract.Product
+@if (Model != null)
+{
+    <h2 class="sub-header">Price of Searched Product</h2>
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>@Model.Name</td>
+                    <td>@Model.Category</td>
+                    <td>@Model.Price</td>
+                    <td>
+                        <a data-id="@Model.Id" id="delete-product" class="btn btn-default" onclick="DeleteProduct(this);">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+}
+else
+{
+    <div class="alert alert-warning alert-dismissible fade in" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+    Search product not found. </div>
+}
+
+
+

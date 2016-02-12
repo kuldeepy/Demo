@@ -1,0 +1,12 @@
+﻿footer {
+    position: fixed;
+    height: 100px;
+    bottom: 0;
+    width: 1024px;
+    
+    
+}
+#footer {
+    color: #fff;
+    background:#333 ;
+}
